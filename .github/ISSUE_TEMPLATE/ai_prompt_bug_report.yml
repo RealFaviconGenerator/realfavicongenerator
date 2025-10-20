@@ -1,0 +1,63 @@
+name: AI Prompt Bug Report
+description: You copied and pasted the AI prompt, and it didn't work.
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework/Technology
+      description: Which framework or technology is your website or web app built with?
+      options:
+        - ASP.NET Core
+        - Angular
+        - Astro
+        - Django
+        - Eleventy (11ty)
+        - Flask
+        - Gatsby
+        - Hugo
+        - Jekyll
+        - Laravel
+        - Next.js
+        - Nuxt.js
+        - Plain HTML, CSS, etc.
+        - React
+        - Remix
+        - Ruby on Rails
+        - Spring Boot
+        - Svelte
+        - Symfony
+        - Vite
+        - Vue.js
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: framework_other
+    attributes:
+      label: Other Framework/Technology
+      description: If you selected "Other" above, please specify which framework or technology
+  - type: dropdown
+    id: ai_agent
+    attributes:
+      label: AI Agent
+      description: Which AI agent are you using?
+      options:
+        - Claude Code
+        - GitHub Copilot
+        - Cursor
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: ai_agent_other
+    attributes:
+      label: Other AI Agent
+      description: If you selected "Other" above, please specify which AI agent
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened when you ran the AI prompt?
+    validations:
+      required: true
